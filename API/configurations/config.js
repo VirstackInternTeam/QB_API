@@ -1,0 +1,9 @@
+module.exports = {
+  refreshToken: "AB11718603903pxJg07bEWXApelAEKwWkHuMdXbCYZbZg8ds6j", //has 100 days expiry limit
+  accessToken:
+    "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..Lmirr26xohf-6xf7VbdplQ.CLQm4I_HGPLTlU22EDZoqKY4cw7oZUrF8P0JeqgmY4wjWdrYg53HxA2--gqCZpkVj1YLUo28sn14C1pGUYrghNs6rirrtipntXgYIwGr79CUurTBD4hFdzgJfO0GrY5k_ddLPd0JHntLPeJNEV8niNxt6104PsK6CeMzirCYH7ukq8sfMZ0f8MaTrRv9gublA4wbMQDJSAgTR3RJpE0N3DDc9TJ6bVEQMIW5JnGEeSMNdDZlzzoIhFYBcKu9IlqxTbI3DmHk0f5cCDyLaMsvDbeCfZ4x-i2OkPbNTkVW4JGqad2epb4tYnayVz8bxZf5CGue_IVC0qY8MnnqcuoWNZzUu57SZC4AXyodIsl1pv1j8wfyCPiwOAWDUibEWATVQKc9DZT2H8nhpUyliI09xP4dRnVqaeEB4HI7ZK7ncd1nWx9Q_PiAPB8XuqMprpI71nHBmRA0gvfIdeFoEENqAmiJmhqiktPCtyCUv-ALt3BHTOwyiaBRX5uaZXuS0u-1ZTGhWN2GIjA_yOpGFFK-Q8asggbhJ6A9XcRP05O1yZJl0dZZFKyx_1jmhia309V0x2XnM4-3PJbAbsnEk_VNsTRdnpZisiJQr87F-vBqxZTMj7Wq4EfMivFDj4GxQIwN2rgfm6-kzs2XTxfmVWCS8aJztpvHyvNMu-xC80K_Eg5RLyKGJ-DTzxGO41dMXyjE8KqZmxnpwmavbgctFMGLlxIcE3HI6b8XeVOTbPdH4p_C3n-eKdZ-J-ZjeDnm1QR9M4YXGQzTp_Z0WkwocqPFDnnjRLuTNzeC3YVKUC-TyM7Rf7dS1DPmlbGKBUhGZ1Q6SB58v6sswyrXabLZUwrsze26J3J3ilUpWXlxSCV7JZ7tfZI81IyACWuCKwh9n0nA.DIvhC1UZjc3hWJTNPbXNFw",
+  companyId: "9130357960426596", //every 60 min this token is expiring use this link to regenerate new token : https://developer.intuit.com/app/developer/playground
+  minorVersion: "70",
+  baseUrl: "https://sandbox-quickbooks.api.intuit.com",
+  prodBaseURL: ":https://quickbooks.api.intuit.com",
+};
