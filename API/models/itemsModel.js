@@ -1,5 +1,7 @@
 const axios = require("axios");
 const config = require("../configurations/config");
+const { accessToken } = require("../configurations/config");
+
 
 const readItems = async () => {
   try {
@@ -7,7 +9,7 @@ const readItems = async () => {
       `${config.baseUrl}/v3/company/${config.companyId}/query?query=select * from Item&minorversion=${config.minorVersion}`,
       {
         headers: {
-          Authorization: `Bearer ${config.accessToken}`,
+          Authorization: `Bearer ${global.accessToken}`,
         },
       }
     );

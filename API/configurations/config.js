@@ -1,14 +1,10 @@
-const axios = require("axios");
-const qs = require("querystring");
-
 module.exports = {
   companyId: "9130357960426596",
   minorVersion: "70",
   baseUrl: "https://sandbox-quickbooks.api.intuit.com",
-  prodBaseURL: "https://quickbooks.api.intuit.com",
   clientID: "ABQbmpABzaiprzSrSEWv1k4M5ft1cogxAMb4iqHkrXPcia1irI",
   clientSecret: "oYY127Np8hVceFBWPMqKrIHFWlJXVd5gSueg00sp",
-  refreshToken: "AB11718603903pxJg07bEWXApelAEKwWkHuMdXbCYZbZg8ds6j",
-  accessToken:
-    "eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..5olFQEQtm8gZ6QGJYewx4w.fo26Dd9itXeTrWo4iKEz1AGHbcuTgRDr1KK7EexqMwFbTcNtWxAVIG0iV8l6vmNJvFTbsYvXldBqlodTdANtdYebUGop-x6NeKPyeujprO4XtujWoeAunCl7O_K6KwY977NGQyXxLb-Q48nf1kVbl77CsLRpsSvmkXs2IU0Q35nmWRTHeYrxEhjbbcpfnQTy5CfWgu5H2sSQxgs55MhAeWl3TILMG1-pEEvkoumGv70OhhENqJuN0C8YzLAQIlD2kChUoMufF7PA7YGTz-aZ1w9mmdSt4zoC-3LYPiAvgAiEJtt5Je5woD4N6-H_dsHeqgdr4fMQJgjif_rTuaURcRNJk7fMD9N-5536flKxLmdFbf22-wfMgnhq_wmzbcxGOVp2Ey4ZmFAIiETpzX1m_YCIoDaB5Y8qTDTIfXz8cnW67SwdFVb1iZ6_KX5MkEn56WuGZs7vI11AfAK6HEWuD3JomKEoOj0rjftOhJ0m6Ch891caXnKpXSBMTn4e4WhQuRcUs2EC4yzQhOcn9wkCYFvbNLjwrtYEDwl1WO6xGGAqN3cFhU7TaduwFaqCrSbXH8HIZ63VYMDqBvp513pfkz_q5K9P_E41w1ZOtLCpmNz4PV92PekMf2AegfoFYfx3SUfT-9WTomEDFNgxTLeX0c3VRxECiW6Y5VF_nPHaWPZgd3nLyRXsXVQKtlhuXpVoCKox_uDwFbPe9RUMAbYqywmuq0eTeLnnIZS9Ng9QhFxV35K4NSu49uI5gDFVF3phPdcy2k_6JDVM9kMtkre0FLzEbdqW00_yJIA2Eyd-mSfZ4MHIYpmKYvoiIqmv4kvRiqZRoTLQua8ykGdeapE1rnIzwNW5-NnbuGDdrf6Chket4xtF9IDUnsI98KInOcHs.uHwqcZKN27NoVLZY7QS68Q",
+  accessToken: "",
+  refreshToken: "",
 };
+
