@@ -3,13 +3,14 @@ const router = express.Router();
 const itemsController = require("../controllers/itemController.js");
 const OAuthClient = require("intuit-oauth");
 const { accessToken } = require("../configurations/config.js");
+const config = require("../configurations/config.js");
 global.accessToken = null;
 
 const oauthClient = new OAuthClient({
   clientId: "ABQbmpABzaiprzSrSEWv1k4M5ft1cogxAMb4iqHkrXPcia1irI",
   clientSecret: "oYY127Np8hVceFBWPMqKrIHFWlJXVd5gSueg00sp",
   environment: "sandbox",
-  redirectUri: "https://society-juan-pi-jack.trycloudflare.com/callback",
+  redirectUri: config.redirectUri,
 });
 
 //Get all items router
@@ -22,7 +23,7 @@ router.get("/callback", (req, res) => {
   oauthClient
     .createToken(parseRedirect)
     .then(function (authResponse) {
-      //console.log(authResponse.token);
+      console.log(authResponse.token);
       global.accessToken = authResponse.token.access_token;
       //console.log(access_token);
       res.send("ok");

@@ -1,7 +1,5 @@
 const axios = require("axios");
 const config = require("../configurations/config");
-const { accessToken } = require("../configurations/config");
-
 
 const readItems = async () => {
   try {
