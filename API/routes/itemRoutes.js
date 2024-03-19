@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const itemsController = require("../controllers/itemController.js");
+const getAllItemsController = require("../controllers/getAllitemController.js");
 const addItemController = require("../controllers/addItemController.js");
 const readItemController = require("../controllers/getOneItemController.js");
 const updateitemController = require("../controllers/updateItemController.js");
@@ -17,13 +17,10 @@ const oauthClient = new OAuthClient({
 });
 
 //Get all items
-router.get("/items", itemsController.getItems);
+router.get("/items", getAllItemsController.getItems);
 
 //Create an Item
 router.get("/createItem", addItemController.createItem);
-
-//Update an Item
-router.get("/updateItem", updateitemController.updateItem);
 
 //Get an Item
 router.get("/readItem/:itemId", async (req, res) => {
@@ -41,6 +38,11 @@ router.get("/readItem/:itemId", async (req, res) => {
     }
   }
 });
+
+//Update an Item
+router.get("/updateItem", updateitemController.updateItem);
+
+
 
 router.get("/callback", (req, res) => {
   const parseRedirect = req.url;
