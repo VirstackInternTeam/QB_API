@@ -1,9 +1,9 @@
 const axios = require("axios");
-const itemModel = require("../models/AddItemModel.js");
 const config = require("../configurations/config.js");
+const itemModel = require("../models/updateItemModel.js");
 
-const createItem = async () => {
-  try {
+const updateItem = async () => {
+ try {
     const response = await axios.post(
       `${config.baseUrl}/v3/company/${config.companyId}/item?minorversion=${config.minorVersion}`,
       itemModel,
@@ -14,13 +14,11 @@ const createItem = async () => {
         },
       }
     );
-
-    console.log("Item created successfully:", response.data);
+    console.log("Item updated successfully:", response.data);
     return response.data;
-  } catch (error) {
-    console.error("Error creating item:", error.response.data);
-    throw error;
-  }
+ } catch (error) {
+    console.error("Error updating item:", error.response.data);
+ }
 };
 
-module.exports = { createItem };
+module.exports = { updateItem };

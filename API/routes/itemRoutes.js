@@ -1,9 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const itemsController = require("../controllers/itemController.js");
+const addItemController = require("../controllers/addItemController.js");
+const readItemController = require("../controllers/getOneItemController.js");
+const updateitemController = require("../controllers/updateItemController.js");
 const OAuthClient = require("intuit-oauth");
-const { accessToken } = require("../configurations/config.js");
 const config = require("../configurations/config.js");
+
 global.accessToken = null;
 
 const oauthClient = new OAuthClient({
@@ -13,8 +16,31 @@ const oauthClient = new OAuthClient({
   redirectUri: config.redirectUri,
 });
 
-//Get all items router
+//Get all items
 router.get("/items", itemsController.getItems);
+
+//Create an Item
+router.get("/createItem", addItemController.createItem);
+
+//Update an Item
+router.get("/updateItem", updateitemController.updateItem);
+
+//Get an Item
+router.get("/readItem/:itemId", async (req, res) => {
+  try {
+    const itemId = req.params.itemId;
+    const result = await readItemController.readItem(itemId);
+    res.status(200).json(result);
+  } catch (error) {
+    if (error.response) {
+      res.status(500).json({ error: error.response.data });
+    } else {
+      res
+        .status(500)
+        .json({ error: "Error retrieving item", details: error.message });
+    }
+  }
+});
 
 router.get("/callback", (req, res) => {
   const parseRedirect = req.url;
@@ -23,7 +49,7 @@ router.get("/callback", (req, res) => {
   oauthClient
     .createToken(parseRedirect)
     .then(function (authResponse) {
-      console.log(authResponse.token);
+      console.log(authResponse);
       global.accessToken = authResponse.token.access_token;
       //console.log(access_token);
       res.send("ok");
